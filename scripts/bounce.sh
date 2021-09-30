@@ -14,6 +14,12 @@ kubectl get po -n "$i"
 done
 
 else
-kubectl get po -n $*
+kubectl get po -n $1
+echo "scaling down the deployment"
+kubectl scale deployment nginx-deployment --replicas=0 -n $1
+
+sleep 10
+echo "Scaling up the deployment"
+kubectl scale deployment nginx-deployment --replicas=1 -n $1
 
 fi
