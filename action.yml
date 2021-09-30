@@ -1,0 +1,14 @@
+name: 'canary-bounce'
+description: 'bounce the deployments'
+author: 'test'
+branding:
+  icon: 'cloud'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.namespace }}
+inputs:
+  namespace:
+    description: 'to bounce the deployment'
