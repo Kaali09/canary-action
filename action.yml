@@ -12,8 +12,6 @@ runs:
 inputs:
   namespace:
     description: 'to bounce the deployment'
-    required: true
     default: confluent
   kubeconfig: 
     description: 'base64 encoded .kube/config'
-    required: true
