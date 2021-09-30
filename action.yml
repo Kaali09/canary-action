@@ -12,3 +12,5 @@ runs:
 inputs:
   namespace:
     description: 'to bounce the deployment'
+  kubeconfig: 
+    description: 'base64 encoded .kube/config'
