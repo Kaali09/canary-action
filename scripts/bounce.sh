@@ -16,3 +16,5 @@ done
 
 else
 kubectl get po -n $*
+
+fi
