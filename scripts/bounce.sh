@@ -7,7 +7,7 @@ mkdir -p ~/.kube
 echo $INPUT_KUBECONFIG | base64 -d > ~/.kube/config
 kubectl get ns
 # Execute kubectl command
-ns=`kubectl get ns | grep confluent | xargs`
+ns=`kubectl get ns | grep kube | awk '{print $1}'`
 for i in $ns; do
 echo "Listing pods in namespace: $i"
 kubectl get po -n "$i"
