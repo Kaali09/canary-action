@@ -7,4 +7,4 @@ mkdir -p ~/.kube
 echo $INPUT_KUBECONFIG | base64 -d > ~/.kube/config
 
 # Execute kubectl command
-kubectl get po -n $INPUT_namespace
+kubectl get po -n confluent
