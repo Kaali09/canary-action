@@ -16,3 +16,4 @@ inputs:
     default: confluent
   kubeconfig: 
     description: 'base64 encoded .kube/config'
+    required: true
