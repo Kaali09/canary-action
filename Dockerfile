@@ -1,4 +1,5 @@
-FROM alpine
+#FROM alpine
+FROM frolvlad/alpine-glibc
 RUN apk --update add curl gettext jq
 RUN curl -L -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod a+x /usr/local/bin/kubectl
