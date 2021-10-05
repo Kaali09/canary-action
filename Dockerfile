@@ -7,7 +7,7 @@ RUN curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv
     && unzip awscliv2.zip \
     && aws/install \
     && rm -rf awscliv2.zip
-RUN awsv2 --version
+#RUN awsv2 --version
 RUN /usr/local/bin/aws --version
 COPY scripts/bounce.sh /usr/local/bin/entrypoint.sh
 RUN chmod a+x /usr/local/bin/entrypoint.sh
