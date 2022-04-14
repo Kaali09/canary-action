@@ -8,5 +8,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 inputs:
-  kubeconfig: 
+  kubeconfig:
     description: 'base64 encoded .kube/config'
